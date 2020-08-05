@@ -1,15 +1,9 @@
-//import skin from './skin'
-//import { encode } from 'plantuml-encoder'
-//import { GLTFExplorer } from './explorer'
-
 var LANG = 'gltf'
 var SELECTOR = 'pre[data-lang="' + LANG + '"]'
 
 function insertCode(content, config) {
-//  var elementHTML = `<div id='gltfExplorer' class='dark' style="height: 80vh; position: absolute"><ul><li><a href="javascript:selectObject(false)">Unselect</a></li></ul></div>`
-//  return elementHTML;
-  var scriptUrl = createUrls('docsify-iframe.js'), objUrl = createUrls(content);
-  var srcDoc = `<!DOCTYPE html><head><link href='docsify-iframe.min.css' rel='stylesheet'/><script src='${scriptUrl}'></script><body><div id='gltfExplorer' class='dark'><ul><li><a href='javascript:selectObject(false)'>Unselect</a></li></ul></div></body>
+  var scriptUrl = createUrls('docsify-iframe.min.js'), objUrl = createUrls(content), cssUrl = createUrls('docsify-iframe.min.css');
+  var srcDoc = `<!DOCTYPE html><head><link href='${cssUrl}' rel='stylesheet'/><script src='${scriptUrl}'></script><body><div id='gltfExplorer' class='dark'><ul><li><a href='javascript:selectObject(false)'>Unselect</a></li></ul></div></body>
     <script>  
       window.onload = function() {
         GLTFExplorer('gltfExplorer', [
@@ -26,18 +20,6 @@ function insertCode(content, config) {
 function insertStyle() {
   return "div.gltfExplorer::before { content: ''; position: absolute; box-shadow: inset 0px 0px 7px 0px #333; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none; } div.gltfExplorer { position:relative; height: 80vh; }"
 }
-
-function startExplorer(content, config) {
-  var url = createUrls(content)
-  GLTFExplorer("gltfExplorer", [
-        {
-            src: url,
-            ghosted: "ghosted" in config ? config.ghosted : false,
-            fixColors: "fixColors" in config ? config.fixColors : false,
-        }
-    ])
-}
-
 
 function createUrls(content) {
   var location = window.location.toString();
