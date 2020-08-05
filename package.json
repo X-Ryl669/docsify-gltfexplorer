@@ -1,0 +1,53 @@
+{
+  "name": "docsify-gltfexplorer",
+  "version": "0.0.1",
+  "description": "A docsify plugin for WebGL 3D explorer of GLTF objects",
+  "main": "src",
+  "scripts": {
+    "start": "run-p start:*",
+    "start:serve": "anywhere -p $(npx get-port)",
+    "start:compile": "webpack . -do dist/docsify-gltfexplorer.js -w",
+    "build": "webpack",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/X-Ryl669/docsify-gltfexplorer.git"
+  },
+  "files": [
+    "src",
+    "dist",
+    "example",
+    "README.md"
+  ],
+  "keywords": [
+    "WebGL",
+    "3D",
+    "GLTF",
+    "docsify",
+    "plugin"
+  ],
+  "author": "X-Ryl669",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/X-Ryl669/docsify-gltfexplorer/issues"
+  },
+  "homepage": "https://github.com/X-Ryl669/docsify-gltfexplorer#readme",
+  "devDependencies": {
+    "anywhere": "^1.5.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.0",
+    "get-port-cli": "^2.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "npm-run-all": "^4.1.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "raw-loader": "^0.5.1",
+    "terser-webpack-plugin": "^3.0.8",
+    "webpack": "^4.4.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-fix-style-only-entries": "^0.5.1"
+  },
+  "dependencies": {
+    "xeogl": "^0.9.0"
+  }
+}
