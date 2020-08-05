@@ -28,4 +28,4 @@ In your markdown file, you'll simply write:
 
 ## Result
 You'll get something like this:
-
+![Example picture](https://raw.githubusercontent.com/X-Ryl669/docsify-gltfexplorer/master/pic/docsify-GLTF.png)
