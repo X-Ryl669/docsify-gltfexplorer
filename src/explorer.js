@@ -208,6 +208,8 @@ function GLTFExplorer (menuId, files) {
                 
                 object.castShadow = true;
                 object.receiveShadow = true;
+                if (!("material" in object)) object.material = new xeogl.Material;
+
                 if (this.replaceColor) {
                     object.material.baseColor = possibleColors[i % possibleColors.length];
                 }
