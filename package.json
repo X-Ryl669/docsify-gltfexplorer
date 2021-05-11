@@ -46,7 +46,8 @@
     "terser-webpack-plugin": "^3.0.8",
     "webpack": "^4.4.0",
     "webpack-cli": "^3.3.12",
-    "webpack-fix-style-only-entries": "^0.5.1"
+    "webpack-fix-style-only-entries": "^0.5.1",
+    "lodash": ">=4.17.21"
   },
   "dependencies": {
     "xeogl": "^0.9.0"
