@@ -3,7 +3,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const RemoveEmptyScripts = require("webpack-remove-empty-scripts");
 
 
 module.exports = {
@@ -24,7 +24,7 @@ module.exports = {
   plugins: [
      new CleanWebpackPlugin(),
      new MiniCssExtractPlugin({filename: "docsify-iframe.min.css"}),
-     new FixStyleOnlyEntriesPlugin(),
+     new RemoveEmptyScripts(),
      new OptimizeCSSAssetsPlugin({})
   ],
   output: {
