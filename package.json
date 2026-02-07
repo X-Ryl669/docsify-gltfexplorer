@@ -47,7 +47,7 @@
     "webpack": "^5.104.1",
     "webpack-cli": "^5.0.1",
     "webpack-remove-empty-scripts": "^1.0.4",
-    "lodash": ">=4.17.21"
+    "lodash": ">=4.17.23"
   },
   "dependencies": {
     "xeogl": "^0.9.0"
