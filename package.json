@@ -43,7 +43,7 @@
     "is-svg": ">=6.1.0",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "raw-loader": "^0.5.1",
-    "terser-webpack-plugin": "^5.3.11",
+    "terser-webpack-plugin": "^5.4.0",
     "webpack": "^5.104.1",
     "webpack-cli": "^5.0.1",
     "webpack-remove-empty-scripts": "^1.0.4",
